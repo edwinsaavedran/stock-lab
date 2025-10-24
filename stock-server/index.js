@@ -29,4 +29,4 @@ app.post('/decrease', (req, res) => {
   res.json({ newStock });
 });
 
-app.listen(3000, () => console.log("🟢 Stock Server corriendo en puerto 3000"));
+app.listen(3000, () => console.log(" Stock Server corriendo en puerto 3000"));
