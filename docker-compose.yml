@@ -1,0 +1,36 @@
+version: '3'
+services:
+  stock-server:
+    build: ./stock-server
+    volumes:
+      - ./shared:/app/data
+    networks:
+      - stock-net
+    container_name: stock-server
+
+  client-a:
+    build: ./stock-client
+    command: node client-A.js
+    depends_on:
+      - stock-server
+    networks:
+      - stock-net
+
+  client-b:
+    build: ./stock-client
+    command: node client-B.js
+    depends_on:
+      - stock-server
+    networks:
+      - stock-net
+
+  client-c:
+    build: ./stock-client
+    command: node client-C.js
+    depends_on:
+      - stock-server
+    networks:
+      - stock-net
+
+networks:
+  stock-net:
