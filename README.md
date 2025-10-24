@@ -25,4 +25,4 @@ Este laboratorio permite observar:
 - Inconsistencia de datos
 - Necesidad de mecanismos como: locks, semáforos, colas, transacciones
 
----
+---# stock-lab
